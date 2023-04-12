@@ -15,7 +15,7 @@ while True:
         try:
             with m as source: audio = r.listen(source)
             value = r.recognize_google(audio,language='fr-FR')
-            print('Tu dit :',str(value))
+            print('Tu dis :',str(value))
             response_bot(value)
         except sr.UnknownValueError:
             print("Reessayer")
